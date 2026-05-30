@@ -1,4 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
+import "dotenv/config"
 
 const options = {
   definition: {
@@ -10,7 +11,9 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:3000'
+        url: process.env.NODE_ENV === "dev"? 
+        'http://localhost:3000':
+        "https://transaction-project-i6bs.onrender.com"
       }
     ],
     components: {
