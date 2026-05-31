@@ -1,0 +1,132 @@
+# 💰 Transaction Management API
+
+A RESTful API built with Node.js, Express, and MongoDB that helps users manage their personal finances. Users can track income and expenses, monitor their balance, upload profile pictures, and view financial reports.
+
+## 🚀 Features
+
+* 🔐 User Authentication (Register & Login)
+* 🛡 JWT Protected Routes
+* 👤 User Profile Management
+* 🖼 Profile Picture Upload with Cloudinary
+* 💵 Income Tracking
+* 💸 Expense Tracking
+* 📊 Balance Calculation
+* 📅 Monthly Transaction Reports
+* ✏️ Update Transactions
+* 🗑 Delete Transactions
+* ✅ Input Validation with Zod
+* 📖 Swagger API Documentation
+
+## 🛠 Technologies Used
+
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+* JWT (jsonwebtoken)
+* bcryptjs
+* Multer
+* Cloudinary
+* Zod
+* Swagger UI
+
+## 📂 Project Structure
+
+```text
+src/
+├── controllers/
+├── middlewares/
+├── models/
+├── routes/
+├── utils/
+├── validations/
+├── config/
+└── server.js
+```
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file:
+
+```env
+PORT=3000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_secret_key
+
+CLOUDINARY_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+Start the server:
+
+```bash
+npm run dev
+```
+
+## 🔑 Authentication
+
+After login, include the JWT token in the Authorization header:
+
+```text
+Authorization: Bearer YOUR_TOKEN
+```
+
+## 📖 API Documentation
+
+Swagger documentation is available at:
+
+```text
+/docs
+```
+
+Example:
+
+```text
+http://localhost:3000/docs
+```
+
+or
+
+```text
+https://your-domain.com/docs
+```
+
+## 📊 Transaction Logic
+
+* Income increases balance.
+* Expenses decrease balance.
+* Users cannot spend more than their available balance.
+* Monthly reports provide spending and income summaries.
+
+## 🌍 Deployment
+
+The API can be deployed on platforms such as:
+
+* Render
+* Railway
+* VPS Servers
+
+MongoDB Atlas is used as the cloud database.
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+## 📄 License
+
+This project is licensed under the MIT License.

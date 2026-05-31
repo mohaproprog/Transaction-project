@@ -22,7 +22,7 @@ router.get("/profile", protect, profile);
  * @swagger
  * /dashboard/profile/lastMonth:
  *   get:
- *     summary: Get current user profile
+ *     summary: Get current the last month transactions
  *     tags: [Profile]
  *     security:
  *       - bearerAuth: []
