@@ -57,12 +57,26 @@ app.use("/docs", swaggerUi.serve,swaggerUi.setup(swaggerSpec));
 
 // middlewares ended
 
-app.get("/",(req,res)=>{
-    res.send("hello word")
-})
-app.get("/admin",(req,res)=>{
-    res.send("hello admin")
-})
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Welcome to the Transaction Management API 💰",
+        description:
+            "This API helps users manage their personal finances by tracking income, expenses, budgets, and transaction history. You can create transactions, monitor your spending, and view financial summaries.",
+        features: [
+            "User Authentication",
+            "Income & Expense Tracking",
+            "Transaction Management",
+            "Profile Dashboard",
+            "Monthly Financial Reports",
+            "Budget Monitoring"
+        ],
+        documentation: "/docs",
+        docsMessage:
+            "To explore and test all available endpoints, visit /docs for the complete API documentation."
+    });
+});
+
 
 //using error handles at the last
 app.use(notFound);
